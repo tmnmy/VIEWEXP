@@ -4,7 +4,7 @@ VIEWEXP affiche vos images et lit vos vidéos au survol dans Windows. Maintenez 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres Ouvrir et Enregistrer.
 
-La première version publique est en préparation. Aucun installateur n’est encore disponible dans ce dépôt.
+Version Windows actuelle : 0.10.0. La release est préparée en brouillon ; le téléchargement public sera ajouté après finalisation des sources et licences des composants tiers.
 
 ## Affichage et commandes
 
@@ -43,6 +43,6 @@ VIEWEXP fonctionne sous Windows 10 et 11, en 64 bits.
 
 ## Code et licences
 
-Le code source de VIEWEXP reste privé. Ce dépôt contient la documentation et les signalements de problèmes, puis accueillera les téléchargements.
+Le code source de VIEWEXP reste privé. Ce dépôt contient la documentation et les signalements de problèmes. Le code source de l’application n’y est pas publié.
 
 L’application utilise notamment ImageMagick et FFmpeg. Leurs licences, attributions et informations sur les sources accompagneront la distribution.
