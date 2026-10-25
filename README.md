@@ -4,7 +4,7 @@ VIEWEXP affiche vos images et lit vos vidéos au survol dans Windows. Maintenez 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres Ouvrir et Enregistrer.
 
-Version Windows actuelle : 0.10.0. La release est préparée en brouillon ; le téléchargement public sera ajouté après finalisation des sources et licences des composants tiers.
+**[Télécharger VIEWEXP 0.10.1 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.10.1/VIEWEXP-0.10.1-Installer.exe)** · [Notes de la préversion et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.10.1)
 
 ## Affichage et commandes
 
@@ -29,9 +29,13 @@ Les vidéos vérifiées comprennent les MP4 H.264, MKV, MOV ProRes/DNxHR et WebM
 
 ## Installation
 
-L’installateur sera proposé dans la section [Releases](https://github.com/tmnmy/VIEWEXP/releases). Il contiendra l’application et ses décodeurs. Vous n’aurez pas besoin d’installer FFmpeg séparément.
+Téléchargez l’installateur depuis la section [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.10.1), puis lancez-le. Il contient VIEWEXP et ImageMagick ; **une connexion Internet est nécessaire à la première installation** pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
-VIEWEXP fonctionne sous Windows 10 et 11, en 64 bits.
+L’installateur fait environ 35 Mo ; le téléchargement FFmpeg représente environ 77 Mo. Une mise à jour réutilise FFmpeg sans réseau si tous ses fichiers sont conformes. En cas d’échec du téléchargement, l’installation existante est conservée.
+
+Cette version est une **préversion** : le téléchargement initial de FFmpeg n’a pas encore été validé de bout en bout depuis l’installateur. L’installation, la lecture vidéo et la désinstallation ont été testées avec l’archive officielle vérifiée.
+
+VIEWEXP fonctionne sous Windows 10 22H2 et Windows 11, en 64 bits.
 
 ## Limites actuelles
 
@@ -45,4 +49,4 @@ VIEWEXP fonctionne sous Windows 10 et 11, en 64 bits.
 
 Le code source de VIEWEXP reste privé. Ce dépôt contient la documentation et les signalements de problèmes. Le code source de l’application n’y est pas publié.
 
-L’application utilise notamment ImageMagick et FFmpeg. Leurs licences, attributions et informations sur les sources accompagneront la distribution.
+L’application utilise [ImageMagick](https://imagemagick.org/) et [FFmpeg](https://ffmpeg.org/). Les licences, attributions et références de sources sont incluses dans l’installation. FFmpeg et ses DLL sont téléchargés directement chez leur fournisseur et restent remplaçables dans le dossier installé.
