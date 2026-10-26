@@ -1,5 +1,12 @@
 # Historique des versions
 
+## 0.13.3
+
+- Correction d’un blocage de l’arrêt lorsque le menu de l’icône reste ouvert pendant une mise à jour, y compris depuis les anciennes versions.
+- Relance de l’ancienne application si le remplacement échoue et que sa restauration est complète et vérifiée.
+- Conservation du diagnostic de l’installateur dans le journal local, même en mode silencieux ; code de sortie ajouté au message d’échec.
+- Réglages et démarrage Windows conservés. Aucun changement des commandes d’aperçu.
+
 ## 0.13.2
 
 - Damier derrière les zones transparentes des images, en plein écran et près du pointeur.

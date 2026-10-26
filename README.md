@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.13.2 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.13.2/VIEWEXP-0.13.2-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.2)
+**[Télécharger VIEWEXP 0.13.3 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.13.3/VIEWEXP-0.13.3-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.3)
 
 ## Consulter ses fichiers
 
@@ -35,11 +35,13 @@ Les PSD restent des aperçus d’image. Le code, le HTML et les tableaux sont af
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.2), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.3), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 36 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
 À partir de la 0.13.0, VIEWEXP recherche les nouvelles versions sur GitHub en arrière-plan. Une notification et le menu de l’icône signalent une version disponible. Le téléchargement de l’installateur commence à votre clic sur « Installer VIEWEXP… ». Autorisez les connexions de VIEWEXP dans votre pare-feu pour utiliser cette fonction.
+
+La 0.13.3 corrige un blocage lorsque le menu de l’icône reste ouvert pendant une mise à jour. Si le remplacement échoue et que l’installation précédente est entièrement restaurée, l’installateur tente de relancer cette version. L’erreur précise reste disponible dans le journal local.
 
 Les versions antérieures à la 0.13.0 nécessitent une première mise à jour manuelle. Le téléchargement initial de FFmpeg depuis l’installateur reste à qualifier sur une installation neuve ; les tests d’installation utilisent l’archive officielle vérifiée ou un runtime déjà conforme.
 
