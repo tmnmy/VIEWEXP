@@ -1,5 +1,11 @@
 # Historique des versions
 
+## 0.17.2
+
+- Aperçus Espace centrés sur le moniteur de la fenêtre source, indépendamment du pointeur.
+- Fond transparent et limite 1 200 × 800 conservés dans le mode correspondant, avec contenu centré.
+- Petites images à 100 %, grandes images ajustées et placement au survol préservés.
+
 ## 0.17.1
 
 - Audio et réouverture du même fichier corrigés en mode Espace.
