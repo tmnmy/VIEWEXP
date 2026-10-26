@@ -1,5 +1,11 @@
 # Historique des versions
 
+## 0.16.1
+
+- Clic gauche après un cran de molette : même rotation autour du modèle que le bouton central, avec les axes inversés déjà retenus.
+- Remplace le déplacement dans le cadre de la 0.16.0 conformément au geste demandé.
+- Zoom, fermeture au relâchement du raccourci et commandes des autres médias conservés.
+
 ## 0.16.0
 
 - Après un cran de molette, clic gauche maintenu pour déplacer le modèle 3D dans le cadre sans fermer l’aperçu.
