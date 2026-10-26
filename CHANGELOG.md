@@ -1,5 +1,12 @@
 # Historique des versions
 
+## 0.14.0
+
+- Aperçu 3D interactif des fichiers BLEND via le Blender installé, avec scripts automatiques désactivés, chargement borné et cache mémoire.
+- Orbite 3D : sens du glissement horizontal et vertical inversé ; bouton central et zoom à la molette conservés.
+- BLEND : maillages enregistrés uniquement ; modificateurs, textures et animations non évalués. Blender non inclus dans l’installateur.
+- Réglages, démarrage Windows et correctifs de mise à jour 0.13.3 conservés.
+
 ## 0.13.3
 
 - Correction d’un blocage de l’arrêt lorsque le menu de l’icône reste ouvert pendant une mise à jour, y compris depuis les anciennes versions.

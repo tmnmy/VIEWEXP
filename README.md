@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.13.3 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.13.3/VIEWEXP-0.13.3-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.3)
+**[Télécharger VIEWEXP 0.14.0 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.14.0/VIEWEXP-0.14.0-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.14.0)
 
 ## Consulter ses fichiers
 
@@ -15,7 +15,7 @@ Choisissez un aperçu en plein écran ou près du pointeur. Les petites images r
 | Images | Molette pour zoomer ; clic gauche ou central maintenu pour se déplacer dans l’image agrandie. |
 | Vidéos | Lecture automatique silencieuse et en boucle. Molette : avancer ou reculer de cinq secondes. |
 | Audio | Lecture avec son. Molette : avancer ou reculer de cinq secondes. |
-| Objets 3D | Bouton central maintenu pour tourner ; molette pour zoomer. |
+| Objets 3D | Bouton central maintenu pour tourner autour du centre de l’objet, axes horizontal et vertical inversés ; molette pour zoomer. |
 | PDF | Page ajustée en largeur. Clic gauche maintenu + glisser pour défiler ; molette pour changer de page. |
 | Texte et code | Lecture seule, sans exécution. Molette ou clic gauche maintenu + glisser pour défiler. |
 
@@ -28,20 +28,22 @@ Le raccourci se choisit par appui sur une touche ou une combinaison. Les options
 - Images : JPEG, PNG, WebP, EXR, DPX, PSD/PSB, TIFF, AVIF, JPEG XL, JPEG 2000, BMP, GIF, ICO, TGA, HDR et d’autres raster.
 - Vidéos vérifiées : MP4 H.264, MKV, MOV ProRes/DNxHR et WebM VP9.
 - Audio vérifié : WAV, MP3, FLAC, M4A, AAC, WMA, Ogg, Opus et AIFF.
-- 3D : OBJ, STL, GLB, glTF et FBX.
+- 3D : OBJ, STL, GLB, glTF, FBX et BLEND.
 - Documents : PDF, TXT, MD, LOG, CSV, TSV, PY, PS1, JS, TS, C/C++, CS, RS, JSON, YAML, TOML, XML, HTML, CSS et d’autres fichiers texte usuels.
 
 Les PSD restent des aperçus d’image. Le code, le HTML et les tableaux sont affichés comme texte brut.
 
+Les fichiers **BLEND** nécessitent Blender 4.2 ou plus récent installé dans `Program Files/Blender Foundation`. VIEWEXP utilise un processus séparé, sans interface et avec scripts automatiques désactivés. L’aperçu porte sur les maillages enregistrés : les modificateurs, animations et textures ne sont pas évalués. Le premier chargement prend plus de temps ; les réouvertures utilisent un cache mémoire borné. Blender n’est pas inclus ni téléchargé par l’installateur.
+
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.3), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.14.0), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 36 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
 À partir de la 0.13.0, VIEWEXP recherche les nouvelles versions sur GitHub en arrière-plan. Une notification et le menu de l’icône signalent une version disponible. Le téléchargement de l’installateur commence à votre clic sur « Installer VIEWEXP… ». Autorisez les connexions de VIEWEXP dans votre pare-feu pour utiliser cette fonction.
 
-La 0.13.3 corrige un blocage lorsque le menu de l’icône reste ouvert pendant une mise à jour. Si le remplacement échoue et que l’installation précédente est entièrement restaurée, l’installateur tente de relancer cette version. L’erreur précise reste disponible dans le journal local.
+La 0.13.3 a corrigé un blocage lorsque le menu de l’icône reste ouvert pendant une mise à jour. Si le remplacement échoue et que l’installation précédente est entièrement restaurée, l’installateur tente de relancer cette version. L’erreur précise reste disponible dans le journal local.
 
 Les versions antérieures à la 0.13.0 nécessitent une première mise à jour manuelle. Le téléchargement initial de FFmpeg depuis l’installateur reste à qualifier sur une installation neuve ; les tests d’installation utilisent l’archive officielle vérifiée ou un runtime déjà conforme.
 
