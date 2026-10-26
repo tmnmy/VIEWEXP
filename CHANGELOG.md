@@ -1,5 +1,11 @@
 # Historique des versions
 
+## 0.16.0
+
+- Après un cran de molette, clic gauche maintenu pour déplacer le modèle 3D dans le cadre sans fermer l’aperçu.
+- Rotation au bouton central et zoom à la molette conservés ; cadrage réinitialisé pour chaque nouvel objet.
+- Fermeture au relâchement du raccourci conservée.
+
 ## 0.15.0
 
 - Son des vidéos activé par défaut, sans changement du volume système.
