@@ -1,5 +1,17 @@
 # Historique des versions
 
+## 0.13.2
+
+- Damier derrière les zones transparentes des images, en plein écran et près du pointeur.
+- PDF ajustés en largeur ; défilement au clic gauche maintenu et glissement pour les PDF et les textes. Taille et glissement validés par l’utilisateur en 0.13.1.
+- Aperçus texte et code sans exécution, avec défilement à la molette et prise en charge d’UTF-8, UTF-16 avec BOM et Windows-1252.
+- Lecture audio avec son ; molette audio/vidéo par sauts de cinq secondes et timecode en bas.
+- Aperçus OBJ, STL, GLB, glTF et FBX : rotation au bouton central, zoom à la molette. Maillages statiques sans textures ni animations.
+- Recherche des releases stables sur GitHub et commande d’installation depuis le menu de l’application. Aucun téléchargement d’installateur sans clic de l’utilisateur.
+- 130 tests automatiques réussis, avec des tests natifs supplémentaires de transparence, de rendu, de remplacement d’image et d’installation.
+
+Le premier téléchargement de FFmpeg depuis l’installateur et le cycle de mise à jour depuis une version publique antérieure restent à qualifier de bout en bout. L’installateur n’est pas signé.
+
 ## 0.10.1 — Préversion publique
 
 - Installateur d’environ 35 Mo ; FFmpeg est téléchargé directement depuis son fournisseur à la première installation (environ 77 Mo).

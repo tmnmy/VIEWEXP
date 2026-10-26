@@ -1,52 +1,61 @@
 # VIEWEXP
 
-VIEWEXP affiche vos images et lit vos vidéos au survol dans Windows. Maintenez votre raccourci, passez la souris sur un fichier et relâchez pour fermer l’aperçu.
+VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, passez la souris sur un fichier et relâchez pour fermer l’aperçu.
 
-L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres Ouvrir et Enregistrer.
+L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.10.1 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.10.1/VIEWEXP-0.10.1-Installer.exe)** · [Notes de la préversion et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.10.1)
+**[Télécharger VIEWEXP 0.13.2 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.13.2/VIEWEXP-0.13.2-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.2)
 
-## Affichage et commandes
+## Consulter ses fichiers
 
-Choisissez un aperçu en plein écran ou près du pointeur, sur fond transparent. Les petites images restent à 100 % ; les grandes sont ajustées à l’écran sans déformation. Les vidéos démarrent automatiquement, sans son, et tournent en boucle.
+Choisissez un aperçu en plein écran ou près du pointeur. Les petites images restent à 100 % ; les grandes sont ajustées sans déformation. Un damier gris rend les zones transparentes visibles. Les marges extérieures restent transparentes dans le mode près du pointeur, limité à 1 200 × 800 pixels.
 
-Le raccourci se configure par appui sur une touche ou une combinaison. Les options, la pause et le démarrage avec Windows sont accessibles depuis l’icône près de l’horloge.
+| Fichier | Aperçu et commandes |
+| --- | --- |
+| Images | Molette pour zoomer ; clic gauche ou central maintenu pour se déplacer dans l’image agrandie. |
+| Vidéos | Lecture automatique silencieuse et en boucle. Molette : avancer ou reculer de cinq secondes. |
+| Audio | Lecture avec son. Molette : avancer ou reculer de cinq secondes. |
+| Objets 3D | Bouton central maintenu pour tourner ; molette pour zoomer. |
+| PDF | Page ajustée en largeur. Clic gauche maintenu + glisser pour défiler ; molette pour changer de page. |
+| Texte et code | Lecture seule, sans exécution. Molette ou clic gauche maintenu + glisser pour défiler. |
 
-| Action | Résultat |
-|---|---|
-| Maintenir le raccourci et survoler un fichier | Ouvrir l’aperçu |
-| Relâcher le raccourci | Fermer l’aperçu |
-| Bouger de plus de 10 pixels avant le zoom | Fermer l’aperçu |
-| Tourner la molette | Activer le zoom |
-| Après le zoom, maintenir le clic gauche ou le bouton central et glisser | Se déplacer dans la vue |
-| Appuyer sur Échap ou faire un clic droit | Fermer l’aperçu |
+Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue. Échap ou clic droit permet de la fermer.
+
+Le raccourci se choisit par appui sur une touche ou une combinaison. Les options, la pause et le démarrage avec Windows sont accessibles depuis l’icône près de l’horloge.
 
 ## Formats
 
-Pour les images : JPEG, PNG, WebP, EXR, DPX, PSD/PSB, TIFF, AVIF, JPEG XL, JPEG 2000, BMP, GIF, ICO, TGA, HDR et d’autres formats.
+- Images : JPEG, PNG, WebP, EXR, DPX, PSD/PSB, TIFF, AVIF, JPEG XL, JPEG 2000, BMP, GIF, ICO, TGA, HDR et d’autres raster.
+- Vidéos vérifiées : MP4 H.264, MKV, MOV ProRes/DNxHR et WebM VP9.
+- Audio vérifié : WAV, MP3, FLAC, M4A, AAC, WMA, Ogg, Opus et AIFF.
+- 3D : OBJ, STL, GLB, glTF et FBX.
+- Documents : PDF, TXT, MD, LOG, CSV, TSV, PY, PS1, JS, TS, C/C++, CS, RS, JSON, YAML, TOML, XML, HTML, CSS et d’autres fichiers texte usuels.
 
-Les vidéos vérifiées comprennent les MP4 H.264, MKV, MOV ProRes/DNxHR et WebM VP9.
+Les PSD restent des aperçus d’image. Le code, le HTML et les tableaux sont affichés comme texte brut.
 
-## Installation
+## Installation et mises à jour
 
-Téléchargez l’installateur depuis la section [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.10.1), puis lancez-le. Il contient VIEWEXP et ImageMagick ; **une connexion Internet est nécessaire à la première installation** pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.13.2), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
-L’installateur fait environ 35 Mo ; le téléchargement FFmpeg représente environ 77 Mo. Une mise à jour réutilise FFmpeg sans réseau si tous ses fichiers sont conformes. En cas d’échec du téléchargement, l’installation existante est conservée.
+L’installateur fait environ 36 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
-Cette version est une **préversion** : le téléchargement initial de FFmpeg n’a pas encore été validé de bout en bout depuis l’installateur. L’installation, la lecture vidéo et la désinstallation ont été testées avec l’archive officielle vérifiée.
+À partir de la 0.13.0, VIEWEXP recherche les nouvelles versions sur GitHub en arrière-plan. Une notification et le menu de l’icône signalent une version disponible. Le téléchargement de l’installateur commence à votre clic sur « Installer VIEWEXP… ». Autorisez les connexions de VIEWEXP dans votre pare-feu pour utiliser cette fonction.
 
-VIEWEXP fonctionne sous Windows 10 22H2 et Windows 11, en 64 bits.
+Les versions antérieures à la 0.13.0 nécessitent une première mise à jour manuelle. Le téléchargement initial de FFmpeg depuis l’installateur reste à qualifier sur une installation neuve ; les tests d’installation utilisent l’archive officielle vérifiée ou un runtime déjà conforme.
 
 ## Limites actuelles
 
-- L’aperçu vidéo est limité à 1080p et 30 images/s maximum, sans son.
-- Pour les fichiers multipages ou multicouches, seule la première page, la première image ou le composite disponible est affiché.
-- L’aperçu HDR n’offre pas de garantie de fidélité pour l’étalonnage.
-- Les fichiers doivent être locaux. Téléchargez les fichiers cloud avant de les prévisualiser.
-- L’installateur n’est pas signé.
+- Vidéo limitée à 1080p et 30 images/s, sans son.
+- 3D : maillages statiques et couleurs simples ; pas de textures ni d’animations.
+- Images multipages ou multicouches : première image ou composite disponible. Les PDF disposent de leur navigation entre pages.
+- Texte : aperçu des huit premiers Mio, encodages UTF-8, UTF-16 avec BOM ou Windows-1252. DOCX, XLSX, RTF et EPUB non pris en charge.
+- PDF : fichier de 256 Mio et 10 000 pages maximum ; pas de demande de mot de passe.
+- Pas de garantie de fidélité HDR pour l’étalonnage.
+- Fichiers locaux uniquement ; téléchargez les fichiers cloud avant de les prévisualiser.
+- Installateur non signé. La qualification actuelle est réalisée sous Windows 11 x64 ; la matrice multi-écrans et DPI reste à compléter.
 
 ## Code et licences
 
-Le code source de VIEWEXP reste privé. Ce dépôt contient la documentation et les signalements de problèmes. Le code source de l’application n’y est pas publié.
+Le code source de VIEWEXP reste privé. Ce dépôt contient la documentation, les installateurs et les signalements de problèmes.
 
-L’application utilise [ImageMagick](https://imagemagick.org/) et [FFmpeg](https://ffmpeg.org/). Les licences, attributions et références de sources sont incluses dans l’installation. FFmpeg et ses DLL sont téléchargés directement chez leur fournisseur et restent remplaçables dans le dossier installé.
+L’application utilise notamment [ImageMagick](https://imagemagick.org/), [FFmpeg](https://ffmpeg.org/) et [ufbx](https://github.com/ufbx/ufbx). Les licences, attributions et références de sources tierces accompagnent l’installation. FFmpeg et ses DLL sont téléchargés chez leur fournisseur et restent remplaçables dans le dossier installé.
