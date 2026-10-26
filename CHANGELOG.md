@@ -1,5 +1,15 @@
 # Historique des versions
 
+## 0.17.1
+
+- Audio et réouverture du même fichier corrigés en mode Espace.
+- Capture d’Échap et annulation des demandes de chargement coordonnées.
+- Distinction TypeScript et vidéos MPEG-TS pour les fichiers .ts.
+- Options adaptées aux petites zones de travail avec défilement et focus clavier visible.
+- Budget glTF vérifié avant allocation, numéros de lignes et synchronisation GDI corrigés.
+- Moins d’allocations dans la préparation des textes, avec mesures CPU avant/après.
+- Paquets construits dans un dossier neuf, contenu autorisé exact, manifeste complet et intégrité des décodeurs contrôlée.
+
 ## 0.17.0
 
 - Aperçu du fichier sélectionné avec Espace ; Espace à nouveau ou Échap ferme.
