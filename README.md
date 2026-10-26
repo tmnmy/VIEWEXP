@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.14.0 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.14.0/VIEWEXP-0.14.0-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.14.0)
+**[Télécharger VIEWEXP 0.15.0 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.15.0/VIEWEXP-0.15.0-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.15.0)
 
 ## Consulter ses fichiers
 
@@ -13,7 +13,7 @@ Choisissez un aperçu en plein écran ou près du pointeur. Les petites images r
 | Fichier | Aperçu et commandes |
 | --- | --- |
 | Images | Molette pour zoomer ; clic gauche ou central maintenu pour se déplacer dans l’image agrandie. |
-| Vidéos | Lecture automatique silencieuse et en boucle. Molette : avancer ou reculer de cinq secondes. |
+| Vidéos | Lecture automatique avec son et en boucle. Molette : avancer ou reculer de cinq secondes. |
 | Audio | Lecture avec son. Molette : avancer ou reculer de cinq secondes. |
 | Objets 3D | Bouton central maintenu pour tourner autour du centre de l’objet, axes horizontal et vertical inversés ; molette pour zoomer. |
 | PDF | Page ajustée en largeur. Clic gauche maintenu + glisser pour défiler ; molette pour changer de page. |
@@ -35,9 +35,11 @@ Les PSD restent des aperçus d’image. Le code, le HTML et les tableaux sont af
 
 Les fichiers **BLEND** nécessitent Blender 4.2 ou plus récent installé dans `Program Files/Blender Foundation`. VIEWEXP utilise un processus séparé, sans interface et avec scripts automatiques désactivés. L’aperçu porte sur les maillages enregistrés : les modificateurs, animations et textures ne sont pas évalués. Le premier chargement prend plus de temps ; les réouvertures utilisent un cache mémoire borné. Blender n’est pas inclus ni téléchargé par l’installateur.
 
+Le **son des vidéos est activé par défaut** lorsqu’une piste audio est présente. La molette avance ou recule le son et l’image ensemble ; relâcher le raccourci ferme la vue et arrête le son. VIEWEXP utilise la sortie Windows par défaut, sans changer le volume système.
+
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.14.0), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.15.0), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 36 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
@@ -49,7 +51,7 @@ Les versions antérieures à la 0.13.0 nécessitent une première mise à jour m
 
 ## Limites actuelles
 
-- Vidéo limitée à 1080p et 30 images/s, sans son.
+- Vidéo limitée à 1080p et 30 images/s.
 - 3D : maillages statiques et couleurs simples ; pas de textures ni d’animations.
 - Images multipages ou multicouches : première image ou composite disponible. Les PDF disposent de leur navigation entre pages.
 - Texte : aperçu des huit premiers Mio, encodages UTF-8, UTF-16 avec BOM ou Windows-1252. DOCX, XLSX, RTF et EPUB non pris en charge.

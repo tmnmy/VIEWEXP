@@ -1,5 +1,13 @@
 # Historique des versions
 
+## 0.15.0
+
+- Son des vidéos activé par défaut, sans changement du volume système.
+- Audio et image déplacés ensemble à la molette et arrêtés à la fermeture de l’aperçu.
+- Cadencement vidéo sur l’horloge de la sortie audio, préparation silencieuse et protection contre les résultats périmés.
+- Vidéos sans piste audio conservées ; libellés et diagnostic mis à jour.
+- BLEND, orbite inversée, réglages et correctifs d’installation précédents conservés.
+
 ## 0.14.0
 
 - Aperçu 3D interactif des fichiers BLEND via le Blender installé, avec scripts automatiques désactivés, chargement borné et cache mémoire.
