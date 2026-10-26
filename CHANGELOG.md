@@ -1,5 +1,13 @@
 # Historique des versions
 
+## 0.17.0
+
+- Aperçu du fichier sélectionné avec Espace ; Espace à nouveau ou Échap ferme.
+- Vue conservée après relâchement et mouvement de souris, avec les interactions existantes.
+- Protection des champs de saisie, des combinaisons de touches et de la répétition automatique.
+- Annulation des chargements en cours et vérification de la sélection avant affichage.
+- Mode survol et commandes des médias conservés.
+
 ## 0.16.1
 
 - Clic gauche après un cran de molette : même rotation autour du modèle que le bouton central, avec les axes inversés déjà retenus.
