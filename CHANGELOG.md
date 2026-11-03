@@ -1,5 +1,23 @@
 # Historique des versions
 
+## 0.26.1
+
+Cette version rassemble les améliorations ajoutées depuis la 0.17.2.
+
+- Les images ouvertes avec Espace, ou après un cran de molette en mode survol, se redimensionnent en tirant un coin avec le clic gauche. Les proportions et le cadrage sont conservés. Le correctif du clic de la 0.26.1 a été confirmé à l’usage.
+- Les grandes photos JPEG peuvent apparaître rapidement sous forme d’aperçu, puis gagner en netteté. Le passage à l’image affinée conserve le cadrage et les protections contre une ancienne image.
+- Le budget de mémoire graphique propose un réglage automatique.
+- Les PDF disposent d’une fenêtre redimensionnable, du plein écran, du déplacement par le cadre, d’un bouton Imprimer et d’une barre de défilement pour les documents de plusieurs pages. La molette fonctionne aussi lorsque le pointeur reste sur le fichier source pendant le survol.
+- Avec Espace, les flèches gauche et droite ouvrent le fichier précédent ou suivant. Par défaut, les images restent entre images et les PDF entre PDF ; une préférence permet de parcourir tous les formats.
+- Audio et vidéo : barre de lecture adaptée à l’aperçu, lecture/pause, progression cliquable, timecode et bouton son mémorisé. L’aperçu 3D indique le nombre de triangles.
+- Plusieurs corrections portent sur les options, les ressources des PDF et la stabilité Windows.
+
+Les petites images restent à 100 % à l’ouverture. Le zoom et le redimensionnement volontaire permettent ensuite de les agrandir. En survol, relâcher le raccourci ferme toujours l’aperçu ; avec Espace, il reste ouvert jusqu’à Espace ou Échap.
+
+Qualification de ce paquet : 327 tests standards et contrôles natifs ciblés réussis ; coins confirmés par l’utilisateur. Le rendu couleur ICC/écran avancé reste en préparation et n’est pas activé. Pas de garantie d’étalonnage HDR.
+
+Windows x64. Installateur d’environ 38 Mo, non signé. Réglages et démarrage Windows conservés lors d’une mise à jour. FFmpeg est téléchargé chez son fournisseur lors d’une première installation si aucun runtime conforme n’est déjà présent. Code source privé.
+
 ## 0.17.2
 
 - Aperçus Espace centrés sur le moniteur de la fenêtre source, indépendamment du pointeur.

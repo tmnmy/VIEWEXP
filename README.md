@@ -4,22 +4,26 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.17.2 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.17.2/VIEWEXP-0.17.2-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.17.2)
+**[Télécharger VIEWEXP 0.26.1 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.26.1/VIEWEXP-0.26.1-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.26.1)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
 ## Consulter ses fichiers
 
-Choisissez un aperçu en plein écran ou près du pointeur. Les petites images restent à 100 % ; les grandes sont ajustées sans déformation. Un damier gris rend les zones transparentes visibles. Les marges extérieures restent transparentes dans le mode près du pointeur, limité à 1 200 × 800 pixels.
+Choisissez un aperçu en plein écran ou près du pointeur. Les petites images restent à 100 % ; les grandes sont ajustées sans déformation. Un damier gris rend les zones transparentes visibles. Les marges extérieures restent transparentes dans le mode près du pointeur, dont le cadre initial est limité à 1 200 × 800 pixels. Les images peuvent ensuite être redimensionnées par leurs coins.
 
 | Fichier | Aperçu et commandes |
 | --- | --- |
-| Images | Molette pour zoomer ; clic gauche ou central maintenu pour se déplacer dans l’image agrandie. |
-| Vidéos | Lecture automatique avec son et en boucle. Molette : avancer ou reculer de cinq secondes. |
-| Audio | Lecture avec son. Molette : avancer ou reculer de cinq secondes. |
-| Objets 3D | Bouton central maintenu pour tourner autour du centre de l’objet, axes horizontal et vertical inversés ; molette pour zoomer ; après un cran de molette, clic gauche maintenu pour tourner autour du modèle. |
-| PDF | Page ajustée en largeur. Clic gauche maintenu + glisser pour défiler ; molette pour changer de page. |
+| Images | Molette pour zoomer ; clic gauche ou central maintenu pour se déplacer. Après Espace ou un cran de molette, tirer un coin avec le clic gauche redimensionne l’aperçu. |
+| Vidéos | Lecture automatique avec son et en boucle. Barre avec lecture/pause, progression et bouton son mémorisé. Molette : avancer ou reculer de cinq secondes. |
+| Audio | Lecture avec son, barre de lecture, progression et son mémorisé. Molette : avancer ou reculer de cinq secondes. |
+| Objets 3D | Bouton central maintenu pour tourner autour du centre de l’objet, axes horizontal et vertical inversés ; molette pour zoomer ; après un cran de molette, clic gauche maintenu pour tourner autour du modèle. Compteur de triangles affiché. |
+| PDF | Page ajustée en largeur, fenêtre redimensionnable, plein écran et bouton Imprimer. Molette, clic gauche maintenu + glisser et barre latérale pour parcourir le document. Le cadre permet de déplacer la fenêtre. |
 | Texte et code | Lecture seule, sans exécution. Molette ou clic gauche maintenu + glisser pour défiler. |
+
+Avec **Espace**, les flèches **← et →** ouvrent le fichier précédent ou suivant du dossier. Par défaut, les images restent entre images et les PDF entre PDF ; ces flèches changent de fichier PDF, pas de page. Dans les options, « Tous les formats » permet de mélanger les types.
+
+Sur les grandes photos JPEG, un premier aperçu peut être affiché avant un raffinement de sa netteté. Le cadrage est conservé. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
 
 Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue. Échap ou clic droit permet de la fermer.
 
@@ -41,9 +45,9 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.17.2), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.26.1), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
-L’installateur fait environ 36 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
+L’installateur fait environ 38 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
 À partir de la 0.13.0, VIEWEXP recherche les nouvelles versions sur GitHub en arrière-plan. Une notification et le menu de l’icône signalent une version disponible. Le téléchargement de l’installateur commence à votre clic sur « Installer VIEWEXP… ». Autorisez les connexions de VIEWEXP dans votre pare-feu pour utiliser cette fonction.
 
@@ -58,7 +62,7 @@ Les versions antérieures à la 0.13.0 nécessitent une première mise à jour m
 - Images multipages ou multicouches : première image ou composite disponible. Les PDF disposent de leur navigation entre pages.
 - Texte : aperçu des huit premiers Mio, encodages UTF-8, UTF-16 avec BOM ou Windows-1252. DOCX, XLSX, RTF et EPUB non pris en charge.
 - PDF : fichier de 256 Mio et 10 000 pages maximum ; pas de demande de mot de passe.
-- Pas de garantie de fidélité HDR pour l’étalonnage.
+- La gestion couleur ICC/écran avancée reste en préparation et n’est pas activée dans cette version. Pas de garantie de fidélité HDR pour l’étalonnage.
 - Fichiers locaux uniquement ; téléchargez les fichiers cloud avant de les prévisualiser.
 - Installateur non signé. La qualification actuelle est réalisée sous Windows 11 x64 ; la matrice multi-écrans et DPI reste à compléter.
 
@@ -70,4 +74,4 @@ L’application utilise notamment [ImageMagick](https://imagemagick.org/), [FFmp
 
 La 0.17.1 corrige notamment l’audio avec Espace, la réouverture du même fichier et les aperçus TypeScript. Les options deviennent défilables sur les petits écrans. La préparation des aperçus texte utilise moins d’allocations.
 
-Avec Espace, le média est centré sur l’écran de la fenêtre source, indépendamment de la souris. En mode transparent, le cadre centré reste limité à 1 200 × 800 pixels. Le placement au survol est conservé.
+Avec Espace, le média est centré sur l’écran de la fenêtre source, indépendamment de la souris. En mode transparent, le cadre initial centré est limité à 1 200 × 800 pixels. Les petites images restent à 100 % à l’ouverture ; zoom et redimensionnement volontaire permettent ensuite de les agrandir.
