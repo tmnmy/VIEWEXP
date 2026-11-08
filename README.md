@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.26.1 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.26.1/VIEWEXP-0.26.1-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.26.1)
+**[Télécharger VIEWEXP 0.28.12 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.28.12/VIEWEXP-0.28.12-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.12)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
@@ -23,11 +23,20 @@ Choisissez un aperçu en plein écran ou près du pointeur. Les petites images r
 
 Avec **Espace**, les flèches **← et →** ouvrent le fichier précédent ou suivant du dossier. Par défaut, les images restent entre images et les PDF entre PDF ; ces flèches changent de fichier PDF, pas de page. Dans les options, « Tous les formats » permet de mélanger les types.
 
-Sur les grandes photos JPEG, un premier aperçu peut être affiché avant un raffinement de sa netteté. Le cadrage est conservé. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
+Sur les JPEG éligibles, un premier aperçu apparaît avant le raffinement de la netteté et de la couleur ICC/écran. Le cadrage est conservé. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
 
-Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue. Échap ou clic droit permet de la fermer.
+Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue. Échap permet de la fermer.
 
 Le raccourci se choisit par appui sur une touche ou une combinaison. Les options, la pause et le démarrage avec Windows sont accessibles depuis l’icône près de l’horloge.
+
+## Commandes image et vidéo
+
+- Redimensionnez l’aperçu : la dernière taille image et la dernière taille vidéo sont mémorisées séparément, même après redémarrage.
+- **F** revient à la taille automatique adaptée à l’écran et oublie la taille mémorisée du type concerné.
+- **Clic droit maintenu + déplacement** déplace la fenêtre d’aperçu.
+- **B** active ou retire un fond noir sur tout le moniteur de l’aperçu. Ce choix est mémorisé. En mode raccourci + survol, B conserve le comportement transitoire : déplacer la souris ou relâcher le raccourci ferme l’aperçu et le fond.
+
+Un petit arc cyan sur fond transparent apparaît près du pointeur pendant les chargements suffisamment longs, puis disparaît. La navigation entre images avec Espace et les flèches conserve l’image précédente et le fond jusqu’à ce que la nouvelle image soit prête.
 
 ## Formats
 
@@ -45,7 +54,7 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.26.1), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.12), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 38 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
@@ -62,7 +71,7 @@ Les versions antérieures à la 0.13.0 nécessitent une première mise à jour m
 - Images multipages ou multicouches : première image ou composite disponible. Les PDF disposent de leur navigation entre pages.
 - Texte : aperçu des huit premiers Mio, encodages UTF-8, UTF-16 avec BOM ou Windows-1252. DOCX, XLSX, RTF et EPUB non pris en charge.
 - PDF : fichier de 256 Mio et 10 000 pages maximum ; pas de demande de mot de passe.
-- La gestion couleur ICC/écran avancée reste en préparation et n’est pas activée dans cette version. Pas de garantie de fidélité HDR pour l’étalonnage.
+- La couleur ICC/écran différée est activée sur les JPEG éligibles ; les autres formats gardent leur rendu habituel. Pas de garantie de fidélité HDR pour l’étalonnage.
 - Fichiers locaux uniquement ; téléchargez les fichiers cloud avant de les prévisualiser.
 - Installateur non signé. La qualification actuelle est réalisée sous Windows 11 x64 ; la matrice multi-écrans et DPI reste à compléter.
 

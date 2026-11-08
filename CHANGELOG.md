@@ -1,5 +1,34 @@
 # Historique des versions
 
+## 0.28.12
+
+VIEWEXP 0.28.12 regroupe les améliorations d’aperçu et les corrections depuis la 0.26.1.
+
+### Aperçus image et vidéo
+
+- Taille mémorisée séparément pour les images et les vidéos, conservée après redémarrage.
+- F rétablit la taille automatique adaptée à l’écran et efface la taille mémorisée du type concerné.
+- Déplacement de la fenêtre par clic droit maintenu.
+- Fond noir plein écran avec B, choix mémorisé.
+- En mode raccourci + survol, B répond dans le contexte source et conserve la fermeture au déplacement de la souris ou au relâchement du raccourci.
+- Navigation entre images : image et fond conservés jusqu’à l’affichage du fichier suivant.
+- Petit indicateur de chargement transparent près de la souris, avec rotation affinée.
+
+### Rendu et fiabilité
+
+- Première image JPEG suivie du raffinement de la couleur ICC/écran pour les fichiers éligibles.
+- Lecture du fichier exact pour les noms contenant des caractères spéciaux, notamment %d.
+- Récupération prudente des nouveaux temporaires de décodage après interruption.
+- Gestion améliorée des notifications secteur/batterie, des budgets de téléchargement et des dialogues d’erreur.
+
+### Installation et vérification
+
+Windows 11 x64. Réglages et démarrage automatique conservés lors de la mise à jour. Installateur non signé. FFmpeg est téléchargé depuis son fournisseur si aucun runtime conforme n’est déjà installé.
+
+475 tests standards réussis, plus les contrôles natifs ciblés du fond noir image/couleur/vidéo et de la fermeture au déplacement. La confirmation visuelle utilisateur du dernier correctif de survol et du loader reste distincte des résultats automatisés. La qualification matérielle multi-écrans/DPI et les limites couleur/HDR décrites dans le README restent applicables.
+
+Télécharger `VIEWEXP-0.28.12-Installer.exe`. Son empreinte SHA-256 est fournie dans `SHA256SUMS.txt`.
+
 ## 0.26.1
 
 Cette version rassemble les améliorations ajoutées depuis la 0.17.2.
