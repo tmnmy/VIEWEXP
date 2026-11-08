@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.28.12 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.28.12/VIEWEXP-0.28.12-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.12)
+**[Télécharger VIEWEXP 0.28.14 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.28.14/VIEWEXP-0.28.14-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.14)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
@@ -38,6 +38,12 @@ Le raccourci se choisit par appui sur une touche ou une combinaison. Les options
 
 Un petit arc cyan sur fond transparent apparaît près du pointeur pendant les chargements suffisamment longs, puis disparaît. La navigation entre images avec Espace et les flèches conserve l’image précédente et le fond jusqu’à ce que la nouvelle image soit prête.
 
+## ASCII art : NFO, ASC et DIZ
+
+Les fichiers NFO, ASC et DIZ disposent d’un aperçu dédié en blanc sur noir. Les caractères DOS CP437, les fichiers UTF-8 et UTF-16 avec BOM, les cadres et les blocs sont pris en charge. Les espaces et les colonnes restent alignés, sans retour automatique à la ligne.
+
+La fenêtre fait **80 colonnes de large par défaut**, avec adaptation de la taille des caractères pour afficher toute la largeur des dessins plus larges. La molette permet de défiler verticalement. Cette première version affiche le contenu passivement, sans interprétation ANSI. Les fichiers TXT conservent leur présentation texte habituelle.
+
 ## Formats
 
 - Images : JPEG, PNG, WebP, EXR, DPX, PSD/PSB, TIFF, AVIF, JPEG XL, JPEG 2000, BMP, GIF, ICO, TGA, HDR et d’autres raster.
@@ -54,7 +60,7 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.12), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.14), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 38 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
@@ -84,3 +90,4 @@ L’application utilise notamment [ImageMagick](https://imagemagick.org/), [FFmp
 La 0.17.1 corrige notamment l’audio avec Espace, la réouverture du même fichier et les aperçus TypeScript. Les options deviennent défilables sur les petits écrans. La préparation des aperçus texte utilise moins d’allocations.
 
 Avec Espace, le média est centré sur l’écran de la fenêtre source, indépendamment de la souris. En mode transparent, le cadre initial centré est limité à 1 200 × 800 pixels. Les petites images restent à 100 % à l’ouverture ; zoom et redimensionnement volontaire permettent ensuite de les agrandir.
+

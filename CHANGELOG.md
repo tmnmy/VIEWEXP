@@ -1,5 +1,35 @@
 # Historique des versions
 
+## 0.28.14
+
+VIEWEXP 0.28.14 ajoute les aperçus ASCII art et plusieurs corrections depuis la 0.28.12.
+
+### Aperçus ASCII art
+
+- Lecture des fichiers NFO, ASC et DIZ en blanc sur noir.
+- Caractères DOS CP437, UTF-8 et UTF-16 avec BOM ; cadres, blocs et accents préservés.
+- Grille fixe sans retour automatique à la ligne et sans numérotation ajoutée au dessin.
+- Fenêtre de 80 colonnes par défaut ; taille des caractères adaptée pour montrer toute la largeur des dessins plus larges.
+- Défilement vertical à la molette.
+- Métadonnées SAUCE retirées du dessin lorsqu’elles sont valides.
+- Lecture passive, sans interprétation ANSI ni exécution de commandes.
+
+La largeur et le maintien du dessin entier ont été confirmés par l’utilisateur sur la 0.28.14.
+
+### Fiabilité
+
+La dernière demande d’aperçu est conservée lorsque le décodeur est occupé, au lieu d’être perdue lorsque la file est pleine. Les contrôles d’annulation et de résultats périmés sont préservés.
+
+### Installation et limites
+
+Windows 11 x64. Réglages et démarrage automatique conservés lors de la mise à jour. Installateur non signé. Un runtime FFmpeg conforme est réutilisé ; sinon, il est téléchargé depuis son fournisseur.
+
+Les limites existantes du README restent applicables. La forme des glyphes Unicode hors DOS dépend des polices Windows disponibles. Les fichiers exceptionnellement larges peuvent dépasser les capacités du plus petit caractère natif ; les limites et troncatures sont signalées.
+
+Vérifications : 498 tests standards initiaux, puis contrôles ciblés après revue. Le correctif final de largeur passe 20 tests bibliothèque et 21 tests d’intégration. Les rasters natifs ont été inspectés.
+
+Télécharger `VIEWEXP-0.28.14-Installer.exe`. L’empreinte SHA-256 figure dans `SHA256SUMS.txt`.
+
 ## 0.28.12
 
 VIEWEXP 0.28.12 regroupe les améliorations d’aperçu et les corrections depuis la 0.26.1.
