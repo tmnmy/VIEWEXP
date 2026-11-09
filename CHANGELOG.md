@@ -1,5 +1,14 @@
 # Historique des versions
 
+## 0.28.17
+
+- Aperçus déplacés entre écrans : cadrage, zoom, fond noir et choix du moniteur cohérents ; recalcul du rendu couleur pour l’écran de destination sans fermeture de l’aperçu.
+- Couleur ICC/écran différée pour les PNG statiques RGB/RGBA 8 bits éligibles, jusqu’à 8 388 608 pixels et 65 536 pixels de largeur, avec conservation de l’alpha. Première image provisoire avant conversion ; autres PNG au rendu historique.
+- Récupération des captures clavier/souris après changement de bureau Windows, livrée en 0.28.15 ; reprise après verrouillage/déverrouillage confirmée.
+- Validation des chemins locaux audio/vidéo/PDF renforcée en 0.28.16 ; fichiers réseau toujours hors périmètre.
+- Parcours JPG/PNG, fond et zoom acceptés sur trois écrans ; reprise après redémarrage d’Explorer, loader transparent/fluide et délai JPEG acceptés.
+- Réglages et démarrage avec Windows conservés. Installateur non signé ; aucune certification HDR ou colorimétrique instrumentale.
+
 ## 0.28.14
 
 VIEWEXP 0.28.14 ajoute les aperçus ASCII art et plusieurs corrections depuis la 0.28.12.

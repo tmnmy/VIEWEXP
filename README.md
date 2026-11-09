@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.28.14 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.28.14/VIEWEXP-0.28.14-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.14)
+**[Télécharger VIEWEXP 0.28.17 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.28.17/VIEWEXP-0.28.17-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.17)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
@@ -23,7 +23,7 @@ Choisissez un aperçu en plein écran ou près du pointeur. Les petites images r
 
 Avec **Espace**, les flèches **← et →** ouvrent le fichier précédent ou suivant du dossier. Par défaut, les images restent entre images et les PDF entre PDF ; ces flèches changent de fichier PDF, pas de page. Dans les options, « Tous les formats » permet de mélanger les types.
 
-Sur les JPEG éligibles, un premier aperçu apparaît avant le raffinement de la netteté et de la couleur ICC/écran. Le cadrage est conservé. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
+Sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 bits éligibles, un premier aperçu apparaît avant le raffinement de la couleur ICC/écran. Les JPEG éligibles peuvent aussi affiner leur netteté. Le cadrage est conservé. Lors d’un déplacement entre écrans, la couleur se recalcule pour l’écran de destination ; l’image précédente reste provisoirement visible pendant ce calcul. Le zoom et le fond noir suivent l’aperçu. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
 
 Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue. Échap permet de la fermer.
 
@@ -60,7 +60,7 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.14), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.17), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 38 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
@@ -77,9 +77,9 @@ Les versions antérieures à la 0.13.0 nécessitent une première mise à jour m
 - Images multipages ou multicouches : première image ou composite disponible. Les PDF disposent de leur navigation entre pages.
 - Texte : aperçu des huit premiers Mio, encodages UTF-8, UTF-16 avec BOM ou Windows-1252. DOCX, XLSX, RTF et EPUB non pris en charge.
 - PDF : fichier de 256 Mio et 10 000 pages maximum ; pas de demande de mot de passe.
-- La couleur ICC/écran différée est activée sur les JPEG éligibles ; les autres formats gardent leur rendu habituel. Pas de garantie de fidélité HDR pour l’étalonnage.
+- La couleur ICC/écran différée est activée sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 bits jusqu’à 8 388 608 pixels et 65 536 pixels de largeur. PNG palette, gris, 16 bits, tRNS et APNG : rendu habituel. Autres formats hors sous-ensemble : rendu habituel. Pas de certification colorimétrique instrumentale ni de garantie de fidélité HDR pour l’étalonnage.
 - Fichiers locaux uniquement ; téléchargez les fichiers cloud avant de les prévisualiser.
-- Installateur non signé. La qualification actuelle est réalisée sous Windows 11 x64 ; la matrice multi-écrans et DPI reste à compléter.
+- Installateur non signé. Qualification sous Windows 11 x64 ; parcours JPG/PNG transparent, zoom et fond noir acceptés sur trois écrans à 100 % et 150 %. Cela ne certifie pas tous les moniteurs ni tous les profils ICC.
 
 ## Code et licences
 
