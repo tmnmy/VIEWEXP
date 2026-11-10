@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.28.17 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.28.17/VIEWEXP-0.28.17-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.17)
+**[Télécharger VIEWEXP 0.29.14 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.29.14/VIEWEXP-0.29.14-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.14)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
@@ -23,7 +23,7 @@ Choisissez un aperçu en plein écran ou près du pointeur. Les petites images r
 
 Avec **Espace**, les flèches **← et →** ouvrent le fichier précédent ou suivant du dossier. Par défaut, les images restent entre images et les PDF entre PDF ; ces flèches changent de fichier PDF, pas de page. Dans les options, « Tous les formats » permet de mélanger les types.
 
-Sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 bits éligibles, un premier aperçu apparaît avant le raffinement de la couleur ICC/écran. Les JPEG éligibles peuvent aussi affiner leur netteté. Le cadrage est conservé. Lors d’un déplacement entre écrans, la couleur se recalcule pour l’écran de destination ; l’image précédente reste provisoirement visible pendant ce calcul. Le zoom et le fond noir suivent l’aperçu. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
+Sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 ou 16 bits éligibles, un premier aperçu apparaît avant le raffinement de la couleur ICC/écran. Les JPEG éligibles peuvent aussi affiner leur netteté. Le cadrage est conservé. Lors d’un déplacement entre écrans, la couleur se recalcule pour l’écran de destination ; l’image précédente reste provisoirement visible pendant ce calcul. Le zoom et le fond noir suivent l’aperçu. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
 
 Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue. Échap permet de la fermer.
 
@@ -44,6 +44,20 @@ Les fichiers NFO, ASC et DIZ disposent d’un aperçu dédié en blanc sur noir.
 
 La fenêtre fait **80 colonnes de large par défaut**, avec adaptation de la taille des caractères pour afficher toute la largeur des dessins plus larges. La molette permet de défiler verticalement. Cette première version affiche le contenu passivement, sans interprétation ANSI. Les fichiers TXT conservent leur présentation texte habituelle.
 
+## Comparer deux images
+
+Sélectionnez deux JPEG ou PNG dans l’Explorateur ou sa Galerie, puis appuyez sur **Espace**. La fenêtre Pupitre affiche les deux images dans un cadrage commun.
+
+- Faites glisser la double flèche centrale pour déplacer la séparation A/B.
+- **D** bascule entre A/B et Différence ; le calcul de Différence commence à la demande.
+- **I** inverse les images A et B.
+- **S** active la séparation inclinable : déplacez la séparation et faites glisser son bras latéral pour la tourner.
+- **Ajuster** change l’alignement entre adaptation de B à A, coins supérieurs gauches et centrage. **F** recadre les images dans la fenêtre.
+- Survolez les petits **ⓘ** en bas des images pour consulter les informations du fichier et sa profondeur source.
+- Molette pour zoomer, déplacement lié des images et **Échap** pour fermer.
+
+Le comparateur accepte les JPEG éligibles et les PNG statiques RGB/RGBA 8 ou 16 bits éligibles. Le canevas commun est réduit à 1 048 576 pixels au maximum, avec sortie SDR 8 bits. Une différence noire ne prouve pas l’identité des fichiers originaux. Des saccades du séparateur restent signalées et leur correction est en cours.
+
 ## Formats
 
 - Images : JPEG, PNG, WebP, EXR, DPX, PSD/PSB, TIFF, AVIF, JPEG XL, JPEG 2000, BMP, GIF, ICO, TGA, HDR et d’autres raster.
@@ -60,7 +74,7 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.28.17), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.14), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 38 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
@@ -72,12 +86,14 @@ Les versions antérieures à la 0.13.0 nécessitent une première mise à jour m
 
 ## Limites actuelles
 
+- Comparateur : des saccades peuvent persister pendant le glissement ou la rotation du séparateur.
+
 - Vidéo limitée à 1080p et 30 images/s.
 - 3D : maillages statiques et couleurs simples ; pas de textures ni d’animations.
 - Images multipages ou multicouches : première image ou composite disponible. Les PDF disposent de leur navigation entre pages.
 - Texte : aperçu des huit premiers Mio, encodages UTF-8, UTF-16 avec BOM ou Windows-1252. DOCX, XLSX, RTF et EPUB non pris en charge.
 - PDF : fichier de 256 Mio et 10 000 pages maximum ; pas de demande de mot de passe.
-- La couleur ICC/écran différée est activée sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 bits jusqu’à 8 388 608 pixels et 65 536 pixels de largeur. PNG palette, gris, 16 bits, tRNS et APNG : rendu habituel. Autres formats hors sous-ensemble : rendu habituel. Pas de certification colorimétrique instrumentale ni de garantie de fidélité HDR pour l’étalonnage.
+- La couleur ICC/écran différée est activée sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 ou 16 bits jusqu’à 8 388 608 pixels et 65 536 pixels de largeur. PNG palette, gris, tRNS et APNG : rendu habituel. Autres formats hors sous-ensemble : rendu habituel. Pas de certification colorimétrique instrumentale ni de garantie de fidélité HDR pour l’étalonnage.
 - Fichiers locaux uniquement ; téléchargez les fichiers cloud avant de les prévisualiser.
 - Installateur non signé. Qualification sous Windows 11 x64 ; parcours JPG/PNG transparent, zoom et fond noir acceptés sur trois écrans à 100 % et 150 %. Cela ne certifie pas tous les moniteurs ni tous les profils ICC.
 

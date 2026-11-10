@@ -1,5 +1,15 @@
 # Historique des versions
 
+## 0.29.14
+
+- Nouveau comparateur Pupitre : sélectionner deux JPEG/PNG puis Espace, y compris dans la Galerie de l’Explorateur.
+- Séparation A/B manipulable directement, mode Différence avec D, inversion avec I et séparation inclinable avec S.
+- Trois alignements avec Ajuster pour comparer des images de dimensions différentes ; zoom et déplacement liés.
+- Informations au survol des ⓘ, indiquant la profondeur de la source. Icônes réduites et cadre rectangulaire supprimé dans cette version.
+- PNG statiques RGB/RGBA 16 bits bornés pris en charge dans l’aperçu simple et la comparaison, avec conservation de la précision source avant réduction ; sortie SDR 8 bits.
+- Ouverture A/B avant le calcul de Différence à la demande. Améliorations de cache de rendu du séparateur, sans garantie de fluidité complète : des saccades restent signalées.
+- Limites : canevas de comparaison réduit à 1 MP, pas de HDR ni de preuve d’identité par une différence noire. Installateur Windows x64 non signé.
+
 ## 0.28.17
 
 - Aperçus déplacés entre écrans : cadrage, zoom, fond noir et choix du moniteur cohérents ; recalcul du rendu couleur pour l’écran de destination sans fermeture de l’aperçu.
