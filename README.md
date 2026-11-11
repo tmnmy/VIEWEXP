@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.29.20 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.29.20/VIEWEXP-0.29.20-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.20)
+**[Télécharger VIEWEXP 0.30.10 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.30.10/VIEWEXP-0.30.10-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.30.10)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
@@ -23,9 +23,9 @@ Choisissez un aperçu en plein écran ou près du pointeur. Les petites images r
 
 Avec **Espace**, les flèches **← et →** ouvrent le fichier précédent ou suivant du dossier. Par défaut, les images restent entre images et les PDF entre PDF ; ces flèches changent de fichier PDF, pas de page. Dans les options, « Tous les formats » permet de mélanger les types.
 
-Sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 ou 16 bits éligibles, un premier aperçu apparaît avant le raffinement de la couleur ICC/écran. Les JPEG éligibles peuvent aussi affiner leur netteté. Le cadrage est conservé. Lors d’un déplacement entre écrans, la couleur se recalcule pour l’écran de destination ; l’image précédente reste provisoirement visible pendant ce calcul. Le zoom et le fond noir suivent l’aperçu. Le budget de mémoire graphique peut être géré automatiquement depuis les options.
+Sur les JPEG éligibles et les PNG statiques RGB/RGBA 8 ou 16 bits éligibles, un premier aperçu apparaît avant le raffinement de la couleur ICC/écran. Les JPEG éligibles peuvent aussi affiner leur netteté. Le cadrage est conservé. Lors d’un déplacement entre écrans, la couleur se recalcule pour l’écran de destination ; l’image précédente reste provisoirement visible pendant ce calcul. Le zoom et le fond noir suivent l’aperçu. Le budget de mémoire graphique est géré automatiquement.
 
-Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue. Échap permet de la fermer.
+Le timecode audio et vidéo s’affiche en bas. Relâcher le raccourci ferme toujours l’aperçu et arrête la lecture. Avant interaction, déplacer la souris de plus de 10 pixels ferme aussi la vue si « Fermer l’aperçu quand la souris bouge » est activé dans les options. Désactivez cette option pour garder la vue jusqu’au relâchement du raccourci. Échap permet de la fermer.
 
 Le raccourci se choisit par appui sur une touche ou une combinaison. Les options, la pause et le démarrage avec Windows sont accessibles depuis l’icône près de l’horloge.
 
@@ -34,7 +34,7 @@ Le raccourci se choisit par appui sur une touche ou une combinaison. Les options
 - Redimensionnez l’aperçu : la dernière taille image et la dernière taille vidéo sont mémorisées séparément, même après redémarrage.
 - **F** revient à la taille automatique adaptée à l’écran et oublie la taille mémorisée du type concerné.
 - **Clic droit maintenu + déplacement** déplace la fenêtre d’aperçu.
-- **B** active ou retire un fond noir sur tout le moniteur de l’aperçu. Ce choix est mémorisé. En mode raccourci + survol, B conserve le comportement transitoire : déplacer la souris ou relâcher le raccourci ferme l’aperçu et le fond.
+- **B** active ou retire un fond noir sur tout le moniteur de l’aperçu. Ce choix est mémorisé. En mode raccourci + survol, B conserve le comportement transitoire : relâcher le raccourci ferme l’aperçu et le fond ; déplacer la souris les ferme également si cette option est activée.
 
 Un petit arc cyan sur fond transparent apparaît près du pointeur pendant les chargements suffisamment longs, puis disparaît. La navigation entre images avec Espace et les flèches conserve l’image précédente et le fond jusqu’à ce que la nouvelle image soit prête.
 
@@ -42,7 +42,27 @@ Un petit arc cyan sur fond transparent apparaît près du pointeur pendant les c
 
 Les fichiers NFO, ASC et DIZ disposent d’un aperçu dédié en blanc sur noir. Les caractères DOS CP437, les fichiers UTF-8 et UTF-16 avec BOM, les cadres et les blocs sont pris en charge. Les espaces et les colonnes restent alignés, sans retour automatique à la ligne.
 
-La fenêtre fait **80 colonnes de large par défaut**, avec adaptation de la taille des caractères pour afficher toute la largeur des dessins plus larges. La molette permet de défiler verticalement. Cette première version affiche le contenu passivement, sans interprétation ANSI. Les fichiers TXT conservent leur présentation texte habituelle.
+La fenêtre fait **80 colonnes de large par défaut**, avec adaptation de la taille des caractères pour afficher toute la largeur des dessins plus larges. La molette permet de défiler verticalement. Les NFO, ASC et DIZ sont affichés passivement, sans interprétation des séquences ANSI. Les fichiers TXT conservent leur présentation texte habituelle.
+
+## Dessins ANSI : ANS
+
+Les fichiers **ANS** disposent d’un rendu statique en couleurs : caractères CP437 ou Unicode reconnu, styles, couleurs 16/256/RGB et commandes de placement. La grille utilise 80 colonnes par défaut ou la largeur SAUCE, jusqu’à 512 colonnes. Les passages de ligne après une rangée pleine et les déplacements horizontaux traversant le bord droit conservent l’alignement du dessin.
+
+Sélectionnez **deux ANS puis Espace** pour afficher leurs dessins complets **côte à côte**, avec nom et information de chaque fichier en en-tête. Zoom et déplacement sont liés ; **I** inverse les dessins, **D** consulte la différence visuelle optionnelle et revient aux deux volets. Les codes sources ne sont pas éditables dans cette vue.
+
+Il s’agit d’un lecteur de dessins, pas d’un terminal : pas d’exécution de commandes, son, animation, Sixel ou polices téléchargées. Lecture limitée à 8 Mio par fichier, 2 097 152 cellules, 32 768 rangées et un budget de traitement. Une police système est utilisée ; certains formats ou effets ANSI avancés ne sont pas reproduits.
+
+## Comparer et modifier deux textes
+
+Sélectionnez deux fichiers texte compatibles puis appuyez sur **Espace**. La fenêtre présente deux volets Scintilla éditables, les lignes numérotées et les différences visuelles. Le verdict identiques/différents compare le texte exactement, espaces compris ; il ne certifie pas l’identité binaire des fichiers.
+
+- Copiez, collez et modifiez le texte dans chaque volet.
+- Le défilement est lié par défaut ; une commande permet de le dissocier.
+- La recherche commune en bas surligne toutes les occurrences dans les deux textes en cyan pendant la frappe. **Ctrl+F** rejoint la recherche ; **Entrée/F3** passe aux occurrences suivantes. La bascule permet des recherches séparées.
+- Chaque en-tête propose sa propre sauvegarde et **Enregistrer sous**. Les changements non enregistrés sont protégés à la fermeture ; annuler un dialogue garde la fenêtre ouverte.
+- Les textes ordinaires reviennent visuellement à la ligne suivant la largeur. Les dessins **NFO/ASC/DIZ** gardent leurs colonnes, avec tabulations de huit colonnes et caractères adaptés au volet.
+
+Le comparateur charge les fichiers complets dans ses bornes : 8 Mio et 250 000 lignes par fichier. UTF-8, UTF-16 avec BOM, Windows-1252 et CP437 pour les dessins sont pris en charge avec contrôle de l’encodage à la sauvegarde. Les fichiers ANS utilisent la comparaison des dessins rendus, sans édition des codes.
 
 ## Comparer deux images
 
@@ -76,9 +96,9 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.20), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.30.10), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
-L’installateur fait environ 38 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
+L’installateur fait environ 40 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
 À partir de la 0.13.0, VIEWEXP recherche les nouvelles versions sur GitHub en arrière-plan. Une notification et le menu de l’icône signalent une version disponible. Le téléchargement de l’installateur commence à votre clic sur « Installer VIEWEXP… ». Autorisez les connexions de VIEWEXP dans votre pare-feu pour utiliser cette fonction.
 
@@ -88,7 +108,7 @@ Les versions antérieures à la 0.13.0 nécessitent une première mise à jour m
 
 ## Limites actuelles
 
-- Un test automatique exigeant la sortie de l’installateur en trois secondes a échoué sur la 0.29.18 et reste à diagnostiquer. Il n’a pas été requalifié sur la 0.29.20 ; l’installation réelle de cette version, le redémarrage et la conservation des réglages ont été vérifiés.
+- Un test automatique exigeant la sortie de l’installateur en trois secondes a échoué sur la 0.29.18 et reste à diagnostiquer. Ce scénario de délai n’a pas été requalifié sur la 0.30.10 ; l’installation réelle de cette version, le redémarrage et la conservation des réglages ont été vérifiés.
 
 - Comparateur : des saccades peuvent persister pendant le glissement ou la rotation du séparateur.
 
@@ -105,7 +125,7 @@ Les versions antérieures à la 0.13.0 nécessitent une première mise à jour m
 
 Le code source de VIEWEXP reste privé. Ce dépôt contient la documentation, les installateurs et les signalements de problèmes.
 
-L’application utilise notamment [ImageMagick](https://imagemagick.org/), [FFmpeg](https://ffmpeg.org/) et [ufbx](https://github.com/ufbx/ufbx). Les licences, attributions et références de sources tierces accompagnent l’installation. FFmpeg et ses DLL sont téléchargés chez leur fournisseur et restent remplaçables dans le dossier installé.
+L’application utilise notamment [ImageMagick](https://imagemagick.org/), [FFmpeg](https://ffmpeg.org/) et [ufbx](https://github.com/ufbx/ufbx), LittleCMS et [Scintilla](https://www.scintilla.org/). Les licences, attributions et références de sources tierces accompagnent l’installation. FFmpeg et ses DLL sont téléchargés chez leur fournisseur et restent remplaçables dans le dossier installé.
 
 La 0.17.1 corrige notamment l’audio avec Espace, la réouverture du même fichier et les aperçus TypeScript. Les options deviennent défilables sur les petits écrans. La préparation des aperçus texte utilise moins d’allocations.
 

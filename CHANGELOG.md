@@ -1,5 +1,27 @@
 # Historique des versions
 
+## 0.30.10
+
+### Nouveautés depuis la 0.29.20
+
+- **Comparateur de textes** : deux fichiers sélectionnés puis Espace ouvrent deux volets Scintilla éditables et numérotés. Différences exactes, espaces compris, défilement lié ou libre, copie/collage et sauvegardes indépendantes avec Enregistrer sous.
+- **Recherche commune** : une seule saisie recherche dans les deux textes, avec surlignage cyan dynamique et compteurs A/B ; une bascule permet des recherches séparées. Nouvelle disposition à deux cadres et correction des traces après redimensionnement.
+- **ASCII art** : NFO/ASC/DIZ conservent leurs colonnes dans le comparateur, sans repli automatique, avec taille des caractères adaptée à chaque volet.
+- **ANSI en couleurs** : aperçu statique des ANS avec palette, couleurs RGB et placement ; deux ANS sont comparés côte à côte avec zoom/déplacement liés, I pour inverser et D pour la différence visuelle optionnelle. Retours et déplacements horizontaux en fin de ligne corrigés.
+- **Options simplifiées** : fermeture de l’aperçu au mouvement de souris activable ; le relâchement du raccourci continue de fermer l’aperçu. Réglages manuels du délai et de la carte graphique retirés.
+
+### Vérification et limites
+
+483 tests de bibliothèque réussis, aucun échec, 131 tests ignorés. Installation réelle 0.30.10, empreintes, conservation des réglages et démarrage Windows vérifiés. Le rendu des deux cas ANSI signalés et corrigés est confirmé par l’utilisateur ; les fonctions du comparateur texte et l’option de mouvement ont été confirmées pendant le lot. Ces essais ne constituent pas une certification de tous les fichiers ou effets ANSI.
+
+Le comparateur texte accepte au plus 8 Mio et 250 000 lignes par fichier. Le lecteur ANSI reste statique et borné : 80 colonnes par défaut, SAUCE jusqu’à 512, pas de Sixel, musique, animation ou polices téléchargeables. Les sources ANSI ne sont pas éditées. La différence visuelle ne prouve pas l’identité des fichiers originaux.
+
+Les limites précédentes restent applicables : saccades possibles dans le wipe des images, sortie de comparaison SDR 8 bits sur canevas réduit à 1 MP, qualification instrumentale couleur non réalisée et scénario de délai du banc installateur encore à diagnostiquer. Installateur Windows x64 non signé. Une première installation télécharge FFmpeg depuis son fournisseur ; une mise à jour réutilise les fichiers conformes.
+
+### Téléchargement
+
+Téléchargez `VIEWEXP-0.30.10-Installer.exe`. Son empreinte SHA-256 figure dans `SHA256SUMS.txt`. Les licences tierces, dont Scintilla, sont incluses dans l’installation. Le code source de VIEWEXP reste privé.
+
 ## 0.29.20
 
 - Ombre Contact sur les chevrons, le bras, le rond et toute la ligne de séparation, à la place des contours sombres ; tracés lissés.
