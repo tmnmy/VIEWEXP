@@ -1,5 +1,15 @@
 # Historique des versions
 
+## 0.29.20
+
+- Ombre Contact sur les chevrons, le bras, le rond et toute la ligne de séparation, à la place des contours sombres ; tracés lissés.
+- Petit rond plein à l’extrémité du bras pour la rotation. Le wipe est toujours orientable, y compris à la verticale ; la bascule S entre deux types de wipe est retirée.
+- Comparaison des PNG statiques RGB/RGBA 8 ou 16 bits jusqu’à 16 777 216 pixels, notamment 4096 × 4096, avec un lecteur acceptant davantage de blocs de données. Les bornes de l’aperçu couleur simple restent inchangées.
+- Message d’erreur de comparaison lisible, sans traces de préparation internes.
+- Rafraîchissement partiel et composition des petites commandes améliorés pour réduire le travail de dessin pendant le glissement. La fluidité réelle reste à qualifier ; des saccades peuvent persister.
+- Commandes D, I, F et Ajuster conservées, ainsi que zoom lié, déplacement et informations au survol.
+- Sortie SDR 8 bits et canevas de comparaison réduit à 1 MP conservés ; pas de preuve d’identité par une différence noire, ni de HDR. Réserve connue sur un test de délai de l’installateur, détaillée dans les notes de release.
+
 ## 0.29.14
 
 - Nouveau comparateur Pupitre : sélectionner deux JPEG/PNG puis Espace, y compris dans la Galerie de l’Explorateur.

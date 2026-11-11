@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.29.14 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.29.14/VIEWEXP-0.29.14-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.14)
+**[Télécharger VIEWEXP 0.29.20 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.29.20/VIEWEXP-0.29.20-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.20)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
@@ -48,15 +48,17 @@ La fenêtre fait **80 colonnes de large par défaut**, avec adaptation de la tai
 
 Sélectionnez deux JPEG ou PNG dans l’Explorateur ou sa Galerie, puis appuyez sur **Espace**. La fenêtre Pupitre affiche les deux images dans un cadrage commun.
 
-- Faites glisser la double flèche centrale pour déplacer la séparation A/B.
+- Faites glisser les deux chevrons centraux pour déplacer la séparation A/B.
 - **D** bascule entre A/B et Différence ; le calcul de Différence commence à la demande.
 - **I** inverse les images A et B.
-- **S** active la séparation inclinable : déplacez la séparation et faites glisser son bras latéral pour la tourner.
+- Le wipe est toujours orientable : faites glisser le petit rond plein au bout du bras latéral pour tourner la séparation. La touche S ne bascule plus entre deux types de wipe.
 - **Ajuster** change l’alignement entre adaptation de B à A, coins supérieurs gauches et centrage. **F** recadre les images dans la fenêtre.
 - Survolez les petits **ⓘ** en bas des images pour consulter les informations du fichier et sa profondeur source.
 - Molette pour zoomer, déplacement lié des images et **Échap** pour fermer.
 
-Le comparateur accepte les JPEG éligibles et les PNG statiques RGB/RGBA 8 ou 16 bits éligibles. Le canevas commun est réduit à 1 048 576 pixels au maximum, avec sortie SDR 8 bits. Une différence noire ne prouve pas l’identité des fichiers originaux. Des saccades du séparateur restent signalées et leur correction est en cours.
+Les commandes du wipe et toute la ligne utilisent une ombre courte pour rester visibles sur une image blanche, avec des traits lissés et un petit rond plein.
+
+Le comparateur accepte les JPEG éligibles et les PNG statiques RGB/RGBA 8 ou 16 bits éligibles jusqu’à **16 777 216 pixels**, notamment 4096 × 4096. Les PNG comportant de nombreux blocs de données sont pris en charge dans les bornes du lecteur ; palette, gris, tRNS, APNG et HDR restent hors sous-ensemble. Le canevas commun est réduit à 1 048 576 pixels au maximum, avec sortie SDR 8 bits. Cette limite d’entrée est propre au comparateur ; l’aperçu couleur différé simple garde sa borne de 8 388 608 pixels. Une différence noire ne prouve pas l’identité des fichiers originaux. Des saccades du séparateur restent signalées et leur correction est en cours.
 
 ## Formats
 
@@ -74,7 +76,7 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.14), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.29.20), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 38 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
@@ -85,6 +87,8 @@ La 0.13.3 a corrigé un blocage lorsque le menu de l’icône reste ouvert penda
 Les versions antérieures à la 0.13.0 nécessitent une première mise à jour manuelle. Le téléchargement initial de FFmpeg depuis l’installateur reste à qualifier sur une installation neuve ; les tests d’installation utilisent l’archive officielle vérifiée ou un runtime déjà conforme.
 
 ## Limites actuelles
+
+- Un test automatique exigeant la sortie de l’installateur en trois secondes a échoué sur la 0.29.18 et reste à diagnostiquer. Il n’a pas été requalifié sur la 0.29.20 ; l’installation réelle de cette version, le redémarrage et la conservation des réglages ont été vérifiés.
 
 - Comparateur : des saccades peuvent persister pendant le glissement ou la rotation du séparateur.
 
