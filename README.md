@@ -17,7 +17,7 @@ Sélectionnez deux fichiers dans l’Explorateur, puis appuyez sur **Espace**.
 - **Deux images JPEG ou PNG.** La touche **D** passe de la vue côte à côte au wipe, puis à la différence. En mode wipe, faites glisser les chevrons pour déplacer la séparation ou le petit rond pour l’incliner. **I** échange les deux images.
 - **Deux textes.** Les différences apparaissent ligne par ligne, espaces compris. Vous pouvez chercher un mot dans les deux textes, modifier chaque volet et enregistrer les fichiers séparément.
 
-Vous pouvez aussi ouvrir un comparateur vide depuis l’icône près de l’horloge, puis y déposer vos fichiers. Le comparateur de textes accepte également le texte collé.
+Pour ouvrir un comparateur vide, faites un clic droit sur l’icône VIEWEXP près de l’horloge, dans la barre des tâches. Choisissez **Comparer des images…** ou **Comparer des textes…**, puis déposez vos fichiers dans la fenêtre. Le comparateur de textes accepte également le texte collé.
 
 ## Formats pris en charge
 
