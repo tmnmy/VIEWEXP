@@ -19,6 +19,17 @@ Sélectionnez deux fichiers dans l’Explorateur, puis appuyez sur **Espace**.
 
 Vous pouvez aussi ouvrir un comparateur vide depuis l’icône près de l’horloge, puis y déposer vos fichiers. Le comparateur de textes accepte également le texte collé.
 
+## Formats et limites
+
+| Usage | Ce que VIEWEXP prend en charge |
+| --- | --- |
+| Aperçu d’image | JPEG, PNG, WebP, TIFF, PSD/PSB, EXR et DPX, entre autres. Pour un PSD, l’aperçu affiche le composite disponible. |
+| Vidéo et audio | MP4 H.264, MOV ProRes ou DNxHR, WebM VP9, ainsi que WAV, MP3 et FLAC. L’aperçu vidéo est limité à 1 920 × 1 080 pixels et 30 images/s. |
+| Comparaison de textes | Jusqu’à 8 Mio et 250 000 lignes par fichier. L’éditeur lit l’UTF-8, l’UTF-16 avec marque d’ordre des octets (BOM), le Windows-1252 et le CP437 pour les dessins ASCII. |
+| Objets 3D | OBJ, STL, GLB, glTF, FBX et BLEND. L’aperçu montre les maillages statiques avec des couleurs simples. |
+
+Le comparateur d’images accepte les JPEG compatibles et les PNG statiques RVB ou RVBA à 8 ou 16 bits. Il calcule la différence sur un canevas commun d’environ un mégapixel au maximum, avec une sortie SDR 8 bits. Deux images peuvent donc donner une différence noire même si leurs fichiers d’origine diffèrent. Le bouton **Informations** sous chaque vignette permet de consulter et de copier les métadonnées EXIF, IPTC et XMP disponibles.
+
 ## Installation
 
 Lancez l’installateur sur Windows x64. Il télécharge [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08) lors de la première installation, qui nécessite donc une connexion Internet. L’installateur est non signé. Les mises à jour conservent vos réglages.
