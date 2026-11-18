@@ -1,5 +1,15 @@
 # Historique des versions
 
+## 0.34.7
+
+Depuis la 0.30.10, les comparateurs d’images et de textes peuvent rester ouverts dans plusieurs fenêtres. Les deux sont accessibles depuis l’icône VIEWEXP près de l’horloge.
+
+- **Images.** Sélectionnez deux JPEG ou PNG et appuyez sur **Espace**. Dans le Pupitre, **D** parcourt **Côte à côte → Wipe → Différence**. Les boutons sont redessinés lors du redimensionnement. Depuis un aperçu JPEG ou PNG ouvert avec Espace, **C** prépare une comparaison avec l’image affichée. Vous pouvez déposer la seconde image dans le Pupitre.
+- **Textes.** Collez du texte ou déposez des fichiers dans les volets A et B. Chacun affiche son nombre de caractères. La taille de police est mémorisée et les résultats de recherche apparaissent en noir sur fond jaune.
+- **Informations.** Consultez les métadonnées EXIF, IPTC et XMP disponibles depuis les vignettes du comparateur. Dans les aperçus JPEG, PNG, vidéo et audio, **I** ouvre le panneau d’informations.
+- **Lecture.** Les GIF animés et les vidéos disposent de commandes sous l’image.
+- **Performances.** L’affichage des différences sur les grands textes se fait par étapes. Les comparateurs d’images partagent un budget mémoire et les déplacements dans un média réutilisent les informations déjà lues.
+
 ## 0.30.10
 
 ### Nouveautés depuis la 0.29.20

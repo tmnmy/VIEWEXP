@@ -4,7 +4,7 @@ VIEWEXP affiche vos fichiers au survol dans Windows. Maintenez votre raccourci, 
 
 L’application fonctionne dans l’Explorateur, sur le Bureau et dans les fenêtres communes Ouvrir et Enregistrer.
 
-**[Télécharger VIEWEXP 0.30.10 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.30.10/VIEWEXP-0.30.10-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.30.10)
+**[Télécharger VIEWEXP 0.34.7 — Windows x64](https://github.com/tmnmy/VIEWEXP/releases/download/v0.34.7/VIEWEXP-0.34.7-Installer.exe)** · [Notes et SHA-256](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.34.7)
 
 **Aperçu rapide à la barre Espace** : sélectionnez un fichier puis appuyez sur Espace. L’aperçu reste ouvert après relâchement et pendant les mouvements de souris. Espace à nouveau ou Échap ferme. Les champs de saisie conservent leur fonctionnement normal. Le mode survol reste disponible.
 
@@ -58,22 +58,26 @@ Sélectionnez deux fichiers texte compatibles puis appuyez sur **Espace**. La fe
 
 - Copiez, collez et modifiez le texte dans chaque volet.
 - Le défilement est lié par défaut ; une commande permet de le dissocier.
-- La recherche commune en bas surligne toutes les occurrences dans les deux textes en cyan pendant la frappe. **Ctrl+F** rejoint la recherche ; **Entrée/F3** passe aux occurrences suivantes. La bascule permet des recherches séparées.
+- La recherche commune en bas surligne toutes les occurrences dans les deux textes en noir sur fond jaune pendant la frappe. **Ctrl+F** rejoint la recherche ; **Entrée/F3** passe aux occurrences suivantes. La bascule permet des recherches séparées.
 - Chaque en-tête propose sa propre sauvegarde et **Enregistrer sous**. Les changements non enregistrés sont protégés à la fermeture ; annuler un dialogue garde la fenêtre ouverte.
 - Les textes ordinaires reviennent visuellement à la ligne suivant la largeur. Les dessins **NFO/ASC/DIZ** gardent leurs colonnes, avec tabulations de huit colonnes et caractères adaptés au volet.
 
 Le comparateur charge les fichiers complets dans ses bornes : 8 Mio et 250 000 lignes par fichier. UTF-8, UTF-16 avec BOM, Windows-1252 et CP437 pour les dessins sont pris en charge avec contrôle de l’encodage à la sauvegarde. Les fichiers ANS utilisent la comparaison des dessins rendus, sans édition des codes.
 
+Depuis l’icône près de l’horloge, **Comparer des textes…** ouvre deux volets vides. Vous pouvez y coller du texte ou déposer des fichiers.
+
 ## Comparer deux images
 
 Sélectionnez deux JPEG ou PNG dans l’Explorateur ou sa Galerie, puis appuyez sur **Espace**. La fenêtre Pupitre affiche les deux images dans un cadrage commun.
 
+Depuis l’icône près de l’horloge, **Comparer des images…** ouvre un Pupitre vide. Déposez une image de chaque côté. Dans un aperçu JPEG ou PNG ouvert avec Espace, **C** ouvre le comparateur avec cette image.
+
 - Faites glisser les deux chevrons centraux pour déplacer la séparation A/B.
-- **D** bascule entre A/B et Différence ; le calcul de Différence commence à la demande.
+- **D** parcourt les modes Côte à côte → Wipe → Différence → Côte à côte. Le calcul de Différence commence à la demande.
 - **I** inverse les images A et B.
 - Le wipe est toujours orientable : faites glisser le petit rond plein au bout du bras latéral pour tourner la séparation. La touche S ne bascule plus entre deux types de wipe.
-- **Ajuster** change l’alignement entre adaptation de B à A, coins supérieurs gauches et centrage. **F** recadre les images dans la fenêtre.
-- Survolez les petits **ⓘ** en bas des images pour consulter les informations du fichier et sa profondeur source.
+- **A** ou **Ajuster** change l’alignement entre adaptation de B à A, coins supérieurs gauches et centrage. **F** recadre les images dans la fenêtre.
+- Survolez une vignette pour consulter les informations du fichier. Cliquez sur **Informations** pour afficher et copier les métadonnées disponibles.
 - Molette pour zoomer, déplacement lié des images et **Échap** pour fermer.
 
 Les commandes du wipe et toute la ligne utilisent une ombre courte pour rester visibles sur une image blanche, avec des traits lissés et un petit rond plein.
@@ -96,7 +100,7 @@ Le **son des vidéos est activé par défaut** lorsqu’une piste audio est pré
 
 ## Installation et mises à jour
 
-Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.30.10), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
+Téléchargez l’installateur depuis les [Releases](https://github.com/tmnmy/VIEWEXP/releases/tag/v0.34.7), puis lancez-le. Il contient VIEWEXP et ImageMagick. Une connexion Internet est nécessaire à la première installation pour télécharger FFmpeg directement depuis [son fournisseur BtbN](https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-09-30-13-08). L’archive et chaque binaire sont vérifiés par SHA-256. Vous n’avez pas à installer FFmpeg séparément.
 
 L’installateur fait environ 40 Mo ; FFmpeg représente environ 77 Mo supplémentaires. Une mise à jour réutilise les fichiers FFmpeg conformes et conserve les réglages ainsi que le choix de démarrage avec Windows. Si la préparation échoue, l’installation existante est conservée.
 
